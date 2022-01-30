@@ -138,7 +138,7 @@ header ul li:hover {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 49px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -152,12 +152,15 @@ header ul li:hover {
 .mobile-menu a {
   color: var(--bg-clr);
 }
-.languages {
-  display: flex;
-  max-width: 5%;
-  position: absolute;
+/* .mobile-languages { */
+/* display: none; */
+/* max-width: 5%; */
+/* position: absolute;
   top: 1.15rem;
-  right: 1%;
+  right: 1%; */
+/* } */
+.languages {
+  display: none;
 }
 .languages img {
   max-width: 55%;
@@ -207,23 +210,23 @@ header ul li:hover {
 /* END OF HERO */
 
 /* ABOUT */
-.about {
+#about {
   max-width: 100%;
   padding: 3rem 0;
   padding-inline: 5%;
   background-color: var(--bg-clr);
 }
 
-.about h2 {
+#about h2 {
   padding-bottom: 1rem;
   /* text-align: center; */
 }
 
-.about p {
+#about p {
   padding-bottom: 1rem;
 }
 
-.about > p:nth-child(5) {
+#about > p:nth-child(5) {
   padding-bottom: 0;
 }
 
@@ -287,7 +290,7 @@ header ul li:hover {
 /* END OF FR NUMBERS */
 
 /* PRODUCTS */
-.products {
+#products {
   max-width: 100%;
   padding: 3rem 0;
   padding-inline: 5%;
@@ -320,6 +323,9 @@ header ul li:hover {
   border-radius: 50%;
   border: 2px solid rgba(109, 28, 28, 1);
 }
+.card p {
+  padding: 0.5rem 0;
+}
 
 .card h3 {
   color: var(--dark-red);
@@ -336,6 +342,9 @@ header ul li:hover {
 }
 .card-availability {
   text-align: center;
+}
+.card-availability h4 {
+  padding-top: 1rem;
 }
 
 /* END OF PRODUCTS */
@@ -396,6 +405,7 @@ header ul li:hover {
   float: right;
   font-size: 1.2rem;
 }
+
 /* Add "minus" sign (-) after Accordion (when accordion is active) */
 .active::after {
   content: "\2212";
@@ -437,6 +447,11 @@ header ul li:hover {
   padding-top: 2rem;
   background-color: var(--bg-clr);
 }
+
+.types-group-one > p:nth-child(7),
+.types-group-two > p:nth-child(7) {
+  padding-bottom: 0.3rem;
+}
 /* END OF PACKAGING TYPES */
 
 /* STORING */
@@ -453,28 +468,28 @@ header ul li:hover {
 /* END OF STORING */
 
 /* CONTACT */
-.contact {
+#contact {
   max-width: 100%;
   padding: 3rem 0;
   padding-inline: 5%;
   background-color: rgb(156, 170, 30);
 }
 
-.contact h2,
-.contact h3 {
+#contact h2,
+#contact h3 {
   padding-bottom: 1rem;
   color: var(--bg-clr);
 }
-.contact p,
-.contact h4 {
+#contact p,
+#contact h4 {
   color: var(--bg-clr);
 }
 
-.contact p {
+#contact p {
   padding-bottom: 0.5rem;
 }
 
-.contact > p:nth-child(2) {
+#contact > p:nth-child(2) {
   padding-bottom: 2rem;
 }
 
@@ -577,7 +592,7 @@ header ul li:hover {
   /* END OF HEADER */
 
   /* ABOUT */
-  .about h4 {
+  #about h4 {
     text-align: center;
   }
 
@@ -636,21 +651,21 @@ header ul li:hover {
   /* END OF HEADER */
 
   /* ABOUT */
-  .about {
+  #about {
     text-align: center;
   }
 
-  .about p {
+  #about p {
     max-width: 80ch;
     margin: auto;
   }
 
-  /* .about > p:nth-child(2) {
+  /* #about > p:nth-child(2) {
     max-width: 60ch;
     margin: auto;
   } */
 
-  /* .about > p:nth-child(4) {
+  /* #about > p:nth-child(4) {
     max-width: 60ch;
     margin: auto;
   } */
@@ -663,7 +678,7 @@ header ul li:hover {
   /* END OF WHO ARE WE */
 
   /* PRODUCTS */
-  .products > p:nth-child(3) {
+  #products > p:nth-child(3) {
     text-align: center;
   }
 
@@ -686,7 +701,7 @@ header ul li:hover {
   }
 
   .card .card-head {
-    background-color: #79d1d1;
+    background-color: #f2fafa;
     border-top-left-radius: 5px;
     padding: 1rem;
     border-top-right-radius: 5px;
@@ -698,31 +713,38 @@ header ul li:hover {
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-left: 3px solid rgba(0, 0, 0, 0.055);
+    border-top: 3px solid rgba(0, 0, 0, 0.055);
+    border-right: 3px solid rgba(0, 0, 0, 0.055);
   }
 
   .card .card-taste {
     padding: 1rem;
-    background-color: #79d1d1;
+    background-color: #f2fafa;
     z-index: 1;
     -webkit-box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-left: 3px solid rgba(0, 0, 0, 0.055);
+    border-right: 3px solid rgba(0, 0, 0, 0.055);
   }
 
   .card .card-fruit {
     padding: 1rem;
-    background-color: #79d1d1;
+    background-color: #f2fafa;
     z-index: 2;
     -webkit-box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-left: 3px solid rgba(128, 8, 8, 0.055);
+    border-right: 3px solid rgba(0, 0, 0, 0.055);
   }
 
   .card .card-availability {
     padding: 1rem;
-    background-color: #79d1d1;
+    background-color: #f2fafa;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     text-align: center;
@@ -733,6 +755,9 @@ header ul li:hover {
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-left: 3px solid rgba(0, 0, 0, 0.055);
+    border-right: 3px solid rgba(0, 0, 0, 0.055);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.055);
   }
 
   .card:nth-child(1) .card-head {
@@ -841,9 +866,13 @@ header ul li:hover {
 
   /* PACKAGING */
   .packaging p {
-    text-align: center;
+    text-align: left;
     max-width: 60ch;
     margin: 0 auto;
+  }
+
+  .packaging > p:nth-child(2) {
+    text-align: center;
   }
 
   .packaging h4 {
@@ -855,6 +884,9 @@ header ul li:hover {
   }
 
   .accordion-panel {
+    margin: 0.5rem 0;
+  }
+  .accordion-panel p {
     margin: 0.5rem 0;
   }
 
@@ -869,7 +901,7 @@ header ul li:hover {
   /* END OF STORING */
 
   /* ABOUT SERBIA */
-  .about-serbia p {
+  #about-serbia p {
     text-align: center;
     max-width: 60ch;
     margin: auto;
@@ -877,12 +909,12 @@ header ul li:hover {
   /* END OF ABOUT SERBIA */
 
   /* CONTACT */
-  .contact p {
+  #contact p {
     max-width: 65ch;
     margin: auto;
   }
 
-  .contact > p:nth-child(2) {
+  #contact > p:nth-child(2) {
     text-align: center;
   }
 
@@ -905,7 +937,7 @@ header ul li:hover {
   /* END OF HEADER */
 
   /* ABOUT */
-  .about {
+  #about {
     padding-inline: 10%;
   }
   /* END OF ABOUT */
@@ -927,7 +959,7 @@ header ul li:hover {
   /* END OF PRODUCTS */
 
   /* PACKAGING */
-  .products > p:nth-child(3) {
+  #products > p:nth-child(3) {
     max-width: 65ch;
     margin: 0 auto;
   }
@@ -946,11 +978,11 @@ header ul li:hover {
   /* END OF STORING */
 
   /* ABOUT SERBIA */
-  .about-serbia {
+  #about-serbia {
     padding-inline: 10%;
   }
 
-  .about-serbia p {
+  #about-serbia p {
     text-align: center;
     max-width: 65ch;
     margin: auto;
@@ -958,11 +990,11 @@ header ul li:hover {
   /* END OF ABOUT SERBIA */
 
   /* CONTACT */
-  .contact {
+  #contact {
     padding-inline: 10%;
   }
 
-  .contact p {
+  #contact p {
     max-width: 65ch;
     margin: auto;
   }
@@ -1002,7 +1034,7 @@ header ul li:hover {
     display: flex;
     max-width: 5%;
     position: absolute;
-    top: 1.12rem;
+    top: 0.95rem;
     right: 1%;
   }
   .languages img {
@@ -1046,11 +1078,11 @@ header ul li:hover {
   /* END OF HERO */
 
   /* ABOUT */
-  .about {
+  #about {
     padding-inline: 20%;
   }
 
-  .about p {
+  #about p {
     max-width: 100%;
     /* text-align: left; */
   }
@@ -1086,7 +1118,7 @@ header ul li:hover {
   /* END OF FR NUMBERS */
 
   /* PRODUCTS */
-  .products {
+  #products {
     padding-inline: 5%;
   }
 
@@ -1098,49 +1130,35 @@ header ul li:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .cards-grid h4 {
+    font-size: 0.98rem;
+  }
+  .cards-grid p {
+    font-size: 0.8rem;
+  }
   .card {
     display: contents;
   }
   .card img {
     max-width: 32%;
-    background-color: white;
-    border-radius: 50%;
-    padding: .2rem;
+    padding: 0.2rem;
   }
-
   .card .card-head {
-    background-color: #f2fafa;
-    border-top-left-radius: 5px;
     padding: 1rem;
-    border-top-right-radius: 5px;
+
     text-align: center;
-    border-left: 3px solid rgba(0, 0, 0, 0.055);
-    border-top: 3px solid rgba(0, 0, 0, 0.055);
-    border-right: 3px solid rgba(0, 0, 0, 0.055);
   }
   .card .card-taste {
     padding: 1rem;
-    background-color: #f2fafa;
-    border-left:  3px solid rgba(0, 0, 0, 0.055);
-    border-right:  3px solid rgba(0, 0, 0, 0.055);
   }
 
   .card .card-fruit {
     padding: 1rem;
-    background-color: #f2fafa;
-    border-left:  3px solid rgba(0, 0, 0, 0.055);
-    border-right:  3px solid rgba(0, 0, 0, 0.055);
   }
 
   .card .card-availability {
     padding: 1rem;
-    background-color: #f2fafa;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     text-align: center;
-    border-left:  3px solid rgba(0, 0, 0, 0.055);
-    border-right:  3px solid rgba(0, 0, 0, 0.055);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.055);
   }
 
   .card:nth-child(1) .card-head {
@@ -1247,7 +1265,7 @@ header ul li:hover {
   }
   /* END OF PRODUCTS */
 
-  .products > p:nth-child(3) {
+  #products > p:nth-child(3) {
     padding-top: 1rem;
     text-align: center;
   }
@@ -1255,7 +1273,7 @@ header ul li:hover {
 
   /* PACKAGING */
   .packaging {
-    padding-inline: 15%;
+    padding-inline: 10%;
   }
 
   .packaging p {
@@ -1268,7 +1286,7 @@ header ul li:hover {
     display: flex;
     justify-content: space-between;
     /* align-items: flex-end; */
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .packaging-types p {
@@ -1299,7 +1317,7 @@ header ul li:hover {
   /* END OF STORING */
 
   /* CONTACT */
-  .contact {
+  #contact {
     padding-inline: 20%;
   }
   /* END OF CONTACT  */
@@ -1312,7 +1330,7 @@ header ul li:hover {
   }
   /* END OF HERO */
   /* ABOUT */
-  .about > p:nth-child(2) {
+  #about > p:nth-child(2) {
     max-width: 80ch;
   }
   /* END OF ABOUT */
@@ -1325,7 +1343,10 @@ header ul li:hover {
 
   /* PACKAGING */
   .packaging {
-    padding-inline: 22%;
+    padding-inline: 12%;
+  }
+  .packaging > p:nth-child(2) {
+    max-width: 75ch;
   }
   /* END OF PACKAGING */
 }
