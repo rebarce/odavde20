@@ -1343,10 +1343,13 @@ header ul li:hover {
 
   /* PACKAGING */
   .packaging {
-    padding-inline: 12%;
+    padding-inline: 22%;
   }
   .packaging > p:nth-child(2) {
     max-width: 75ch;
+  }
+  .packaging-types {
+    gap: 4rem;
   }
   /* END OF PACKAGING */
 }
